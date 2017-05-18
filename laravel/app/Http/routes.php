@@ -13,3 +13,8 @@
 
 Route::get('/', 'mycontroller@index'
 );
+
+Route::get('post','postcontroller@index');
+Route::post('post/insert', 'postcontroller@insert');
+Route::get('post/show', 'postcontroller@show');
+Route::get('post/edit', 'postcontroller@edit');
