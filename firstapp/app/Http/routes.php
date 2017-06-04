@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', 'mycontroller@index'
-);
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('post','postcontroller@index');
-Route::post('post/insert', 'postcontroller@insert');
-Route::get('post/show', 'postcontroller@show');
-Route::get('post/edit', 'postcontroller@edit');
+Route::get('about', 'pagecontroller@getabout');
+Route::get('contact', 'pagecontroller@getcontact');
+Route::resource('product','productcontroller');
